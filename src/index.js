@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import classes from  './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux'
@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 const app = (<Provider store={store}>
-                <App/>
+                <App body={classes.body}/>
             </Provider>)
 
 ReactDOM.render(app, document.getElementById('quote-box'));

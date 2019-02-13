@@ -21,7 +21,7 @@ export const quotesFetchFailed = (err) => {
 
 export const fetchQuotes = () => dispatch => {
     dispatch(quotesLoading());
-    return fetch('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1')
+    return fetch('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40')
         .then(response => {
             if(response.ok){
                 return response;

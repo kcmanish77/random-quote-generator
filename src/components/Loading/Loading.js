@@ -1,4 +1,4 @@
 import React from 'react';
-import './Loading.css'
+import classes from './Loading.css'
 
-export const Loading = () => <div className="Loading">Loading...</div>;
+export const Loading = () => <div className={`${classes.Loading} container mx-5`}></div>;
